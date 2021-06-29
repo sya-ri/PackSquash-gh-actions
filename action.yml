@@ -1,0 +1,10 @@
+name: 'Run PackSquash'
+description: 'Use PackSquash to reduce texture size'
+author: 'sya-ri'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'edit'
+  color: 'blue'
