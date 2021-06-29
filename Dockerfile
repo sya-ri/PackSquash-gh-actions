@@ -3,6 +3,8 @@ FROM ubuntu:18.04
 # https://github.com/ComunidadAylas/PackSquash/wiki/Installation-guide#linux
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
+    curl \
+    wget \
     libgstreamer1.0-0 \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-bad \
