@@ -4,6 +4,7 @@ FROM ubuntu:18.04
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
     curl \
+    ca-certificates \
     wget \
     unzip \
     libgstreamer1.0-0 \
