@@ -13,13 +13,13 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sSL https://api.github.com/repos/ComunidadAylas/PackSquash/releases/latest \
-    | grep "browser_download_url.*PackSquash.executable.Linux.zip\"" \
-    | cut -d : -f 2,3 \
-    | tr -d \" \
-    | wget -qi -\
-    && unzip PackSquash.executable.Linux.zip \
-    && chmod a+x packsquash \
-    && mv packsquash /usr/local/bin/
+ | grep "browser_download_url.*PackSquash.executable.Linux.zip\"" \
+ | cut -d : -f 2,3 \
+ | tr -d \" \
+ | wget -qi -\
+ && unzip PackSquash.executable.Linux \
+ && chmod a+x packsquash \
+ && mv packsquash /usr/local/bin/
 
 COPY entrypoint.sh /entrypoint.sh
 
