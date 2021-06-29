@@ -1,5 +1,5 @@
 name: 'Run PackSquash'
-description: 'Use PackSquash to reduce texture size'
+description: 'Optimize resource packs with PackSquash'
 author: 'sya-ri'
 
 runs:
