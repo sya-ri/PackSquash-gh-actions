@@ -20,7 +20,7 @@ QUANTIZE_IMAGE=${11}
 OUTPUT=${12}
 
 # print version
-echo PackSquash version: "$(packsquash --version)"
+packsquash --version
 
 # generate settings
 echo $'
