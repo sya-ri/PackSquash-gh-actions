@@ -26,6 +26,8 @@ A tool that outputs an optimized Minecraft resource pack (using [ComunidadAylas/
 ### Example Usage
 ※ The resource pack directory is `texture`.
 
+Pushing to the repository will be able to download the optimized file from the GitHub Actions artifacts.
+
 ##### .github/workflows/packsquash.yml
 ```yaml
 name: Optimize ResoucePack
