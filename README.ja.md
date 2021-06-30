@@ -1,5 +1,7 @@
 # action-PackSquash
 
+[![テンプレートから作成](https://img.shields.io/badge/-%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%8B%E3%82%89%E4%BD%9C%E6%88%90-brightaqua?style=for-the-badge&logo=github)](https://github.com/sya-ri/action-PackSquash-Template-ja/generate)
+
 [ComunidadAylas/PackSquash](https://github.com/ComunidadAylas/PackSquash) を使って、Minecraft のリソースパックから最適化したファイルを出力するするツール。
 
 > 可能な限り最高の圧縮を実現する Minecraft リソースパック用最適化ツール。これにより、効率的な配布と短いダウンロード時間でテクスチャを反映させることができます。参考例として、デフォルトのオプションを使用すると、ハリーポッターリソースパック v1.6.2 の ZIP ファイルサイズが 118MiB から 57MiB になり、51.69% 縮小されました。
