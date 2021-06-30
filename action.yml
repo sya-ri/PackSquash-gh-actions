@@ -4,7 +4,7 @@ author: 'sya-ri'
 
 inputs:
   path:
-    description: 'Relative path to the texture pack directory'
+    description: 'Relative path to the texture pack directory.'
     required: true
   skip_pack_icon:
     description: 'If true, the pack.png file that contains the resource pack icon will not be included in the result ZIP file. As of Minecraft 1.16.3, the icon of server resource packs is not displayed, so this optimization does not have any drawbacks in this case.'
@@ -47,7 +47,7 @@ inputs:
     required: false
     default: 'true'
   output:
-    description: 'Directory to output optimized texture packs'
+    description: 'Optimized texture pack zip filename.'
     required: false
     default: 'optimize-texture'
 runs:
