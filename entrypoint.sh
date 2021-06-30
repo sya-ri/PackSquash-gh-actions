@@ -23,7 +23,7 @@ OUTPUT=${12}
 packsquash --version
 
 # generate settings
-echo $'
+echo '
 resource_pack_directory = '$DIRECTORY_PATH'
 skip_pack_icon = '$SKIP_PACK_ICON'
 strict_zip_spec_compliance = '$STRICT_ZIP_SPEC_COMPLIANCE'
