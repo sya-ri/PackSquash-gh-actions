@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # options
-PATH=${1}
+DIRECTORY_PATH=${1}
 SKIP_PACK_ICON=${2}
 STRICT_ZIP_SPEC_COMPLIANCE=${3}
 COMPRESS_ALREADY_COMPRESSED_FILES=${4}
@@ -24,7 +24,7 @@ packsquash --version
 
 # generate settings
 echo $'
-resource_pack_directory = '$PATH'
+resource_pack_directory = '$DIRECTORY_PATH'
 skip_pack_icon = '$SKIP_PACK_ICON'
 strict_zip_spec_compliance = '$STRICT_ZIP_SPEC_COMPLIANCE'
 compress_already_compressed_files = '$COMPRESS_ALREADY_COMPRESSED_FILES'
