@@ -52,7 +52,7 @@ inputs:
     required: false
     default: 'true'
   output:
-    description: 'Optimized texture pack zip filename.'
+    description: 'Optimized texture pack filename.'
     required: false
     default: 'optimize-texture'
 runs:

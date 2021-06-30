@@ -21,7 +21,7 @@ A tool that outputs an optimized Minecraft resource pack (using [ComunidadAylas/
 | [minimum_bitrate](https://github.com/ComunidadAylas/PackSquash/wiki/Settings-file-format#minimum_bitrate) | `40000` | Specifies the minimum bits per second (bps or bit/s) that the OGG encoder will try to use to represent the audio signal. |
 | [maximum_bitrate](https://github.com/ComunidadAylas/PackSquash/wiki/Settings-file-format#maximum_bitrate) | `96000` | Specifies the maximum bits per second (bps or bit/s) that the OGG encoder will try to use to represent the audio signal. |
 | [quantize_image](https://github.com/ComunidadAylas/PackSquash/wiki/Settings-file-format#quantize_image) | `true` | When true, libimagequant will perform palette quantization on PNG images to reduce the number of different colors to a maximum of 256, in order to save space. |
-| output | `optimize-texture` | Optimized texture pack zip filename. |
+| output | `optimize-texture` | Optimized texture pack filename. |
 
 ### Example Usage
 ※ The resource pack directory is `texture`.
@@ -43,12 +43,11 @@ jobs:
         uses: sya-ri/action-PackSquash@v1.0.0
         with:
           path: texture
-          output: optimize-texture.zip
       - name: Output Optimized
         uses: actions/upload-artifact@v2
         with:
           name: optimize-texture
-          path: optimize-texture.zip
+          path: optimize-texture
 ```
 
 ## `[Advanced]` Use Setting File
