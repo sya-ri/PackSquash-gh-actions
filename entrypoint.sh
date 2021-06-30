@@ -1,23 +1,24 @@
 #!/bin/sh
 
 # options
-DIRECTORY_PATH=${1}
-SKIP_PACK_ICON=${2}
-STRICT_ZIP_SPEC_COMPLIANCE=${3}
-COMPRESS_ALREADY_COMPRESSED_FILES=${4}
-IGNORE_SYSTEM_AND_HIDDEN_FILES=${5}
-ALLOW_MOD_OPTIFINE=${6}
+SETTING_FILE=${1}
+DIRECTORY_PATH=${2}
+SKIP_PACK_ICON=${3}
+STRICT_ZIP_SPEC_COMPLIANCE=${4}
+COMPRESS_ALREADY_COMPRESSED_FILES=${5}
+IGNORE_SYSTEM_AND_HIDDEN_FILES=${6}
+ALLOW_MOD_OPTIFINE=${7}
 ALLOW_MODS="["
 if [ $ALLOW_MOD_OPTIFINE = "true" ]; then
     ALLOW_MODS=$ALLOW_MODS"\"OptiFine\""
 fi
 ALLOW_MODS=$ALLOW_MODS"]"
-SAMPLING_FREQUENCY=${7}
-TARGET_PITCH=${8}
-MINIMUM_BITRATE=${9}
-MAXIMUM_BITRATE=${10}
-QUANTIZE_IMAGE=${11}
-OUTPUT=${12}
+SAMPLING_FREQUENCY=${8}
+TARGET_PITCH=${9}
+MINIMUM_BITRATE=${10}
+MAXIMUM_BITRATE=${11}
+QUANTIZE_IMAGE=${12}
+OUTPUT=${13}
 
 # print version
 packsquash --version
@@ -25,8 +26,9 @@ packsquash --version
 # change to GitHUb WorkSpace Directory
 cd "$GITHUB_WORKSPACE"
 
-# generate settings
-echo '
+if [ -z $SETTING_FILE ]; then
+  # generate settings
+  echo '
 resource_pack_directory = "'$DIRECTORY_PATH'"
 skip_pack_icon = '$SKIP_PACK_ICON'
 strict_zip_spec_compliance = '$STRICT_ZIP_SPEC_COMPLIANCE'
@@ -43,6 +45,11 @@ maximum_bitrate = '$MAXIMUM_BITRATE'
 ["**/*.png"]
 quantize_image = '$QUANTIZE_IMAGE'
 ' > packsquash-settings.toml
+
+  SETTING_FILE=packsquash-settings.toml
+fi
+
+cat $SETTING_FILE
 
 # optimize
 packsquash packsquash-settings.toml

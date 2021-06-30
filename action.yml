@@ -3,9 +3,14 @@ description: 'Optimize resource packs with PackSquash'
 author: 'sya-ri'
 
 inputs:
+  setting_file:
+    description: 'Setting by directly specifying the configuration file.'
+    required: false
+    default: ''
   path:
     description: 'Relative path to the texture pack directory.'
-    required: true
+    required: false
+    default: '.'
   skip_pack_icon:
     description: 'If true, the pack.png file that contains the resource pack icon will not be included in the result ZIP file. As of Minecraft 1.16.3, the icon of server resource packs is not displayed, so this optimization does not have any drawbacks in this case.'
     required: false
@@ -54,6 +59,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.setting_file }}
     - ${{ inputs.path }}
     - ${{ inputs.skip_pack_icon }}
     - ${{ inputs.strict_zip_spec_compliance }}
