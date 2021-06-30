@@ -22,6 +22,9 @@ OUTPUT=${12}
 # print version
 packsquash --version
 
+# change to GitHUb WorkSpace Directory
+cd "$GITHUB_WORKSPACE"
+
 # generate settings
 echo '
 resource_pack_directory = "'$DIRECTORY_PATH'"
