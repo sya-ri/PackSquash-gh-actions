@@ -2,6 +2,8 @@
 
 [![Create from template](https://img.shields.io/badge/-Create%20from%20template-brightaqua?style=for-the-badge&logo=github)](https://github.com/sya-ri/action-PackSquash-Template/generate)
 
+**:warning: Deprecate. Please use official action: [ComunidadAylas/PackSquash-action](https://github.com/ComunidadAylas/PackSquash-action)**
+
 A tool that outputs an optimized Minecraft resource pack (using [ComunidadAylas/PackSquash](https://github.com/ComunidadAylas/PackSquash))
 
 > A Minecraft resource pack optimizer which aims to achieve the best possible compression, which allows for efficient distribution and slightly improved load times in the game, at good speed. Anecdotal evidence shows that, with the default options, it is able to reduce the size of the Witchcraft & Wizardary resource pack ZIP file by Floo Network (version 1.6.2) from 118 MiB to 57 MiB, a 51.69% size reduction.
